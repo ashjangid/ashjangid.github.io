@@ -38,42 +38,43 @@ var app = angular.module('resume', [])
                 'Python',
                 'JavaScript',
                 'C',
-                'BASH',
+                'GO',
+                'Kotlin',
+                'Scss'
+
             ]
-        }, {
-            name: 'CSS',
+        },   {
+            name: 'Advance Task',
             types: [
-                'SCSS',
-                'Bootstrap',
+                'OpenCV',
+                'NLP',
+                'Data Processing',
+                'Web Scarping',
+
+
             ]
-        }, {
-            name: 'JavaScript',
-            types: [
-                'procesing js',
-                'AJAX',
-                'Pure JS',
-                'jQuery'
-            ]
-        }, {
-            name: 'Python',
+        },{
+            name: 'Backend ',
             types: [
                 'Django',
-                'Core',
-                'Scrapy',
-                'Selenium'
+                'Nginx',
+                'Go',
+                'Mysql',
+                'MongoDB'
             ]
         }];
     })
     .controller('toolsCtrl', function ($scope) {
         $scope.tools = [{
-                name: 'Source Control',
+                name: 'Also know',
                 types: [
                 'Git',
-                'Github',
+                'Docker',
+                         
 
             ]
         }, {
-                name: 'Tasks',
+                name: 'MQ',
                 types: [
                 'Celery',
                 'Redis',
@@ -90,7 +91,7 @@ var app = angular.module('resume', [])
                 'Heroku',
                 'pythonanywhere',
                 'AWS',
-                'gcloud',
+                'Digital Ocean',
             ]
         }, {
                 name: 'Working',
@@ -99,16 +100,7 @@ var app = angular.module('resume', [])
                 'RNN,CNN'
             ]
         },
-            {
-                name: 'Help in',
-                types: [
-                'Data Processing',
-                'Computer Vision',
-                'Task Handling',
-                'Web Scraping',
-
-            ]
-        }, ];
+         ];
     })
     .controller('organizationCtrl', function ($scope) {
         $scope.organizations = [
