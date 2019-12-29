@@ -1,109 +1,236 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="en-US">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Ash's Resume</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,300,700|Vollkorn:400italic,400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <title>Ash</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Ashvini Jangid Portfolio" />
+    <meta name="keywords" content="Ashvini Jangid,Data Scientist,Machine learning Expert" />
+    <meta name="author" content="Ashvini Jangid" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Poppins:200,400,500,700,800&display=swap' rel='stylesheet'
+        type='text/css'>
+    <link rel="stylesheet" href="css/clear.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/prettyPhoto.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="style.css">
 
-
+    <!--[if lt IE 9]>
+            <script src="js/html5shiv.js"></script>            
+            <script src="js/respond.min.js"></script>                   
+        <![endif]-->
 </head>
 
-<body>
-    <div id="padding-color">
+<body class="one-page">
 
-        <div class="resume-container" ng-app="resume">
-            <article itemscope itemtype="http://schema.org/Person">
-                <header role="banner" ng-controller="personCtrl">
-                    <img itemprop="image" src="{{ personInfo.img }}" alt="{{ personInfo.name }}" title="{{ personInfo.name }}" class="resume-image" />
-                    <h1 itemprop="name"><span style="text-shadow: 0 -3px 0 #333, 0 6px 8px rgba(0,0,0,.4), 0 9px 10px rgba(0,0,0,.15), 0 30px 10px rgba(0,0,0,.18), 0 15px 10px rgba(0,0,0,.21);">{{ personInfo.name }}</span></h1>
-                    <h2 itemprop="description">{{ personInfo.description }}</h2>
-                    <address class="contact-info">
-        <a href="{{ personInfo.phone.url }}" itemprop="telephone" target="_blank" class="phone-number">{{ personInfo.phone.text }}</a>
-        <a href="{{ personInfo.email.url }}" itemprop="email" target="_blank" class="email-address">{{ personInfo.email.text }}</a>
-        <a href="{{ social.url }}" itemprop="url" target="_blank" class="icon" ng-repeat="social in personInfo.social"><i class="fa {{ social.icon }}"></i></a>
-      </address>
-                </header>
-                <section class="education-section" ng-controller="educationCtrl">
-                    <h1>Education</h1>
-                    <ul>
-                        <li ng-repeat="school in schools">
-                            <h2>{{ school.program }}</h2>
-                            <div itemscope itemtype="http://schema.org/School" class="school-name-location-date-container">
-                                <span itemprop="name">{{ school.name }}</span>
-                                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="address-container">
-                                    <span itemprop="addressLocality" class="school-location">{{ school.city }}</span>,<abbr itemprop="addressRegion" title="{{ school.state }}" class="state-abbr">{{ school.stateAbbr }}</abbr>
-                                </div>
-                                <span class="school-dates">({{ school.dates }})</span>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-                <section class="languages-section" ng-controller="languagesCtrl">
-                    <h1>Languages</h1>
-                    <ul class="languages-list">
-                        <li class="language-tool-column" ng-repeat="language in languages">
-                            <h2 class="language-name">{{ language.name }}</h2>
-                            <ul class="secondary-languages-list">
-                                <li ng-repeat="type in language.types">{{ type }}</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-                <section class="tools-section" ng-controller="toolsCtrl">
-                    <h1>Tools</h1>
-                    <ul class="tools-list">
-                        <li class="language-tool-column" ng-repeat="tool in tools">
-                            <h2 class="tool-type">{{ tool.name }}</h2>
-                            <ul class="secondary-tools-list">
-                                <li ng-repeat="type in tool.types">{{ type }}</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-                <section class="experience-section" ng-controller="organizationCtrl">
-                    <h1>Professional Work Experience</h1>
-                    <ul class="work-experience-list">
-                        <li ng-repeat="organization in organizations">
-                            <div class="organization-heading" itemscope itemtype="http://schema.org/Organization">
-                                <a href="{{ organization.url }}" itemprop="sameAs" title="{{ organization.name }}">
-                                    <h2 itemprop="name" class="organization-name">{{ organization.name }}</h2>
-                                </a>
-                            </div>
-                            <span class="organization-dates">{{ organization.dates }}</span>
-                            <div ng-repeat="position in organization.positions">
-                                <h3 class="position-title">{{ position.title }}</h3>
-                                <ul class="tertiary-work-experience-list">
-                                    <li ng-repeat="responsibility in position.responsibilities">{{ responsibility }}</li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-                <section class="camps-conferences-section" ng-controller="campsCtrl">
-                    <h1>Fun Stuff</h1>
-                    <div class="camps-conferences-container" ng-repeat="camp in camps">
-                        <a href="{{ camp.url }}" target="_blank">
-                            <h2 class="camp-name">{{ camp.name }}</h2>
-                        </a>
-                        <span class="camp-dates">{{ camp.dates }}</span>
-                        <p class="camp-description">{{ camp.description }}</p>
+    <div class="doc-loader"></div>
+
+    <div class="container">
+        <div class="page-wrapper">
+
+            <!-- ================= HEADER ================= -->
+            <div id="nav-btn" class="nav-btn">
+                <span class="nav-btn-cover">
+                    <span class="menu-line"></span>
+                </span>
+            </div>
+            <div class="s-nav">
+                <div class="nav-count">
+                    <div class="current-num">
+                        <span>01</span>
                     </div>
-                </section>
-            </article>
+                    <div class="pagination-sep">/</div>
+                    <div class="total-pages-num">07</div>
+                </div>
+                <div class="nav-container">
+                    <a class="site-title slow-scroll" href="#home">Ashvini Jangid</a>
+                    <nav class="nav-menu">
+                        <ul class="nav-list">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <ul class="nav-soc">
+                    <li><a href="https://github.com/ashvinijangid">Github.</a></li>
+                    <li><a href="https://www.instagram.com/ashvini_jangid/">InstaGram.</a></li>
+                    <li><a href="https://www.facebook.com/ashvinikumarjangid">FaceBook.</a></li>
+                </ul>
+            </div>
+            <!-- =============== HEADER END =============== -->
+
+            <!-- ================== HOME ================== -->
+            <section id="home" class="section">
+                <div class="container-wrap">
+                    <h1 class="entry-title" data-jarallax-element="0 30">Hello <br>I’m <span>Ashvini Jangid</span></h1>
+                    <img class="main-photo block-right" data-jarallax-element="0 -30" src="images/photo-1.jpg" alt="">
+                    <a href="#services" class="main-btn slow-scroll"><img src="images/scroll-icon.svg" alt=""></a>
+                </div>
+            </section>
+            <!-- ================= HOME END ================= -->
+
+            <!-- ================== SERVICES ================== -->
+            <section id="services" class="section">
+
+                <div class="content-670">
+                    <h2 class="title">SERVICES</h2>
+                    <div class="section-des">
+                        <b>Computer Vision | Deep/Machine learning | IOT | Vue | GoRoutine |
+                            Django | Actix | MicroController | NeoGraph | Pytorch | Docker | Juju | Spark |
+                            DigitalOcean | Cassandra</b>
+                    </div>
+                    <p>
+
+                    </p>
+                </div>
+
+                <ul class="serv-link-cover block-right" data-jarallax-element="0 40">
+                    <li><a href="#">DOWNLOAD CV</a></li>
+                    <li><a href="#">MY PORTFOLIO</a></li>
+                </ul>
+
+                <div class="content-670">
+                    <div class="serv-block-wrap">
+
+                        <div class="serv-block-item">
+                            <img src="images/serv-icon-1.svg" alt="">
+                            <h4>DESIGN</h4>
+                            <p>
+                                A Designer With little bit knowledge of Scss and Html. <br> Mostly use Processing Env.
+                                Big fan of materializecss.
+                            </p>
+                        </div>
+
+                        <div class="serv-block-item">
+                            <img src="images/serv-icon-2.svg" alt="">
+                            <h4>DEVELOP</h4>
+                            <p>
+                                With Vue, WebPack, Gulp and Django
+                            </p>
+                        </div>
+
+                        <div class="serv-block-item">
+                            <img src="images/serv-icon-3.svg" alt="">
+                            <h4>WRITE</h4>
+                            <p>
+                                Write Code in Python, Rust, Go, JS and Embed C
+                            </p>
+                        </div>
+
+                        <div class="serv-block-item">
+                            <img src="images/serv-icon-4.svg" alt="">
+                            <h4>BUILD</h4>
+                            <p>
+                                little-bit Robotics with #ROS. <br> ESP-32 is Awasome.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- ================ SERVICES END ================ -->
+
+            <!-- ==================== ABOUT ==================== -->
+            <section id="about" class="section">
+                <h2 class="title">ABOUT</h2>
+                <div class="section-des">
+                    आत्मज्ञानं समारम्भः तितिक्षा धर्मनित्यता । यमर्थान्नापकर्षन्ति स वै पण्डित उच्यते ॥
+                </div>
+
+                <div class="content-670">
+                    <p>
+
+                    </p>
+                </div>
+
+                <!-- <img class="about-img block-right" data-jarallax-element="0 -40" src="images/about-img.jpg" alt=""> -->
+
+                <ul class="about-info" data-threshold="0 0" data-jarallax-element="40 0">
+                    <li>
+                        <h6>EMAIL</h6>
+                        <a href="mailto:ashvinijangid@gmail.com">ashvinijangid@gmail.com</a>
+                    </li>
+                    <li>
+                        <h6>ROLE</h6>
+                        <span>Data Scientist</span>
+                    </li>
+                    <li>
+                        <h6>PHONE</h6>
+                        <a href="tel:+919694978266">(+91) 9694978266</a>
+                    </li>
+                </ul>
+
+                <div class="about-text content-670">
+                    <p></p>
+                </div>
+
+                <img style="width: 20rem;" class="signature" src="images/signature.svg" alt="">
+
+            </section>
+            <!-- ================== ABOUT END ================== -->
+
+            <!-- ==================== ABOUT ==================== -->
+            <section id="contact" class="section">
+                <h2 class="title">CONTACT</h2>
+                <div class="section-des">
+                    Ashvini Jangid <br>
+                    Jaipur, India <br>
+                    +919694978266
+                </div>
+                <div class="content-670">
+                    <p>
+                        You may call, mail, whatsapp to given Number.
+                    </p>
+                </div>
+                <!-- 
+                <a href="https://www.google.com/maps/place/Central+Park/@40.7828647,-73.9653551,15z/data=!4m5!3m4!1s0x0:0xb9df1f7387a94119!8m2!3d40.7828647!4d-73.9653551"
+                    target="_blank">
+                    <img class="block-right" src="images/map.png" alt="">
+                </a> -->
+                <!-- 
+                <div class="content-670">
+                    <div class="contact-form">
+                        <p>
+                            <input id="name" type="text" name="your-name" placeholder="NAME">
+                        </p>
+                        <p>
+                            <input id="contact-email" type="email" name="your-email" placeholder="EMAIL">
+                        </p>
+                        <p>
+                            <input id="subject" type="text" name="your-subject" placeholder="SUBJECT">
+                        </p>
+                        <p>
+                            <textarea id="message" name="your-message" placeholder="MESSAGE"></textarea>
+                        </p>
+                        <p class="contact-submit-holder">
+                            <input type="submit" value="SEND">
+                        </p>
+                    </div>
+                </div> -->
+
+            </section>
+            <!-- ================== ABOUT END ================== -->
         </div>
-        </div>
-        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js'></script>
-        <script src="index.js"></script>
+    </div>
 
-
-    
-
+    <!--=================== SCRIPT ===================-->
+    <script src="js/jquery.js"></script>
+    <script src="js/imagesloaded.pkgd.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/jarallax.js"></script>
+    <script src="js/jarallax-element.min.js"></script>
+    <script src="js/isotope.pkgd.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src='js/owl.carousel.min.js'></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
